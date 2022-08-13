@@ -70,7 +70,7 @@ export const AddPost = () => {
   useEffect(() => {
     if (id) {
       axios
-        .get(`/posts${id}`)
+        .get(`/posts/${id}`)
         .then(({ data }) => {
           setTitle(data.title);
           setText(data.text);
@@ -126,7 +126,7 @@ export const AddPost = () => {
           </Button>
           <img
             className={styles.image}
-            src={`${process.env.REACT_APP_API_URL}${imageUrl}`}
+            src={`http://localhost:4444${imageUrl}`}
             alt="Uploaded"
           />
         </>
